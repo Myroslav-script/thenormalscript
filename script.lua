@@ -238,7 +238,6 @@ G2L["1c"]["Position"] = UDim2.new(-0.00476, 0, 0, 0);
 
 -- StarterGui.ScreenGui.Frame.Frame.first.Player.Walkspeed.Walkspeed
 G2L["1d"] = Instance.new("TextBox", G2L["1a"]);
-G2L["1d"]["CursorPosition"] = -1;
 G2L["1d"]["Name"] = [[Walkspeed]];
 G2L["1d"]["BorderSizePixel"] = 0;
 G2L["1d"]["TextSize"] = 14;
@@ -678,9 +677,9 @@ local script = G2L["18"];
 			isOn = true
 			script.Parent.TextButton:TweenPosition(UDim2.new(0.65, 0,-0.429, 0),"Out", "Bounce", 0.5, true)
 				while wait(0) do
-					local snare = game:FindFirstChild("Snare")
-					snare:Destroy()
+					player.PlayerGui:WaitForChild("AdminPanel").Enabled = true
 					if isOn == false then
+						player.PlayerGui.AdminPanel.Enabled = false
 						break
 					end
 			end
