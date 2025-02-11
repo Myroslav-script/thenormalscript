@@ -199,6 +199,7 @@ G2L["18"] = Instance.new("LocalScript", G2L["14"]);
 
 -- StarterGui.ScreenGui.Frame.Frame.first.Player
 G2L["19"] = Instance.new("Frame", G2L["6"]);
+G2L["19"]["Visible"] = false;
 G2L["19"]["BorderSizePixel"] = 0;
 G2L["19"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["19"]["Size"] = UDim2.new(0, 209, 0, 130);
@@ -348,6 +349,7 @@ G2L["28"]["CornerRadius"] = UDim.new(0, 5);
 
 -- StarterGui.ScreenGui.Frame.Frame.second.Player
 G2L["29"] = Instance.new("Frame", G2L["27"]);
+G2L["29"]["Visible"] = false;
 G2L["29"]["BorderSizePixel"] = 0;
 G2L["29"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["29"]["Size"] = UDim2.new(0, 209, 0, 130);
@@ -504,7 +506,6 @@ G2L["3a"]["CornerRadius"] = UDim.new(1, 0);
 
 -- StarterGui.ScreenGui.Frame.Frame.Hiplayer
 G2L["3b"] = Instance.new("Frame", G2L["3"]);
-G2L["3b"]["Visible"] = false;
 G2L["3b"]["BorderSizePixel"] = 0;
 G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(50, 50, 50);
 G2L["3b"]["Size"] = UDim2.new(0, 450, 0, 328);
@@ -701,14 +702,20 @@ local script = G2L["40"];
 	script.Parent.Parent.Gui.MouseButton1Click:Connect(function()
 		script.Parent.Hiplayer.Visible = false
 		script.Parent.first.Gui.Visible = true
+		script.Parent.first.Player.Visible = false
+		script.Parent.second.Player.Visible = false
 	end)
 	script.Parent.Parent.Player.MouseButton1Click:Connect(function()
 		script.Parent.Hiplayer.Visible = false
-		script.Parent.first.Gui.Visible = false
+		script.Parent.first.Gui.Visible = true
+		script.Parent.first.Player.Visible = true
+		script.Parent.second.Player.Visible = true
 	end)
 	script.Parent.Parent["Main menu"].MouseButton1Click:Connect(function()
 		script.Parent.Hiplayer.Visible = true
-		script.Parent.first.Gui.Visible = true
+		script.Parent.first.Gui.Visible = false
+		script.Parent.first.Player.Visible = false
+		script.Parent.second.Player.Visible = false
 	end)
 end;
 task.spawn(C_40);
