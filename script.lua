@@ -677,9 +677,9 @@ local script = G2L["18"];
 			isOn = true
 			script.Parent.TextButton:TweenPosition(UDim2.new(0.65, 0,-0.429, 0),"Out", "Bounce", 0.5, true)
 				while wait(0) do
-					player.PlayerGui:WaitForChild("AdminPanel").Enabled = true
+					player.PlayerGui:WaitForChild("DevExplorer").Enabled = true
 					if isOn == false then
-						player.PlayerGui.AdminPanel.Enabled = false
+						player.PlayerGui.DevExplorer.Enabled = false
 						break
 					end
 			end
